@@ -1,3 +1,3 @@
 
 //asset Images
-const applogo = "assets/images/logo.jpg";
+const applogo = "assets/images/applogo.png";
