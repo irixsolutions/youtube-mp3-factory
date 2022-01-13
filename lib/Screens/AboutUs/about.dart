@@ -2,6 +2,7 @@ import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
 import 'package:youtube_mp3_factory/Constants/colors.dart';
 import 'package:youtube_mp3_factory/Constants/images.dart';
+import 'package:youtube_mp3_factory/Models/screen_size.dart';
 
 
 
@@ -40,7 +41,7 @@ Widget iniwidget() {
 
 Widget bgdesign(){
   return Container(
-          height: 280,
+          height: ScreenSize.height * 0.3,
           decoration: const BoxDecoration(
             borderRadius: BorderRadius.only(bottomLeft: Radius.circular(150)),
             color: primaryColor
@@ -57,18 +58,17 @@ return CircularProfileAvatar(
           borderWidth: 2,
           elevation: 50,
           radius: 75,);
-
 }
 
 Widget backdetails(){
   return Container(
-                height: 650,
-                width: 400,
+                height: ScreenSize.height * 0.8,
+                width: ScreenSize.width * 0.85,
                 //alignment: Alignment.topLeft,
                 transformAlignment: Alignment.topLeft,
                 decoration: const BoxDecoration(                
                         borderRadius:
-                            BorderRadius.only(bottomRight: Radius.circular(150)),
+                            BorderRadius.only(bottomRight: Radius.circular(80)),
                             boxShadow: [
                     BoxShadow(
                       color: Colors.grey,
@@ -80,4 +80,8 @@ Widget backdetails(){
                         color: kWhite
     ),
   ); 
+}
+
+Widget cicle1(){
+  return 
 }

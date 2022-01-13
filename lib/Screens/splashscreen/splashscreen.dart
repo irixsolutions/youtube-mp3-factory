@@ -15,7 +15,7 @@ class splash extends StatelessWidget {
       splash: applogo,
       nextScreen: const AboutUs(),
       splashTransition: SplashTransition.rotationTransition,
-      splashIconSize: ScreenSize.width * 2.5,
+      splashIconSize: ScreenSize.width * 0.5,
     );
   }
 }
