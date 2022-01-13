@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:youtube_mp3_factory/Screens/Wrapper/wrapper.dart';
 import 'package:youtube_mp3_factory/Screens/splashscreen/splashscreen.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
           textTheme: GoogleFonts.latoTextTheme(
             Theme.of(context).textTheme,
           )),
-      home: const splash(),
+      home: const Wrapper(),
     );
   }
 }
