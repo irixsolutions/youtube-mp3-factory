@@ -7,7 +7,7 @@ class DrawerTileChange extends ChangeNotifier {
   List<DrawerTileModel> drawerTileData = [
     DrawerTileModel(icon: FontAwesomeIcons.home, title: "Home"),
     DrawerTileModel(icon: FontAwesomeIcons.teamspeak, title: "About Us"),
-    DrawerTileModel(icon: FontAwesomeIcons.star, title: "FeedBack"),
+    DrawerTileModel(icon: FontAwesomeIcons.star, title: "Feedback"),
     DrawerTileModel(icon: FontAwesomeIcons.shareAlt, title: "Share"),
     DrawerTileModel(icon: FontAwesomeIcons.signOutAlt, title: "Exit"),
   ];
@@ -37,7 +37,7 @@ class DrawerTileChange extends ChangeNotifier {
   Future<void> share() async {
     await FlutterShare.share(
         title: 'Mp3 Factory App 😍',
-        text: 'Hello , Download this awsome mp3 factory app from here 😍👉\n',
+        text: 'Hello , Download this awesome mp3 factory app from here 😍👉\n',
         linkUrl: 'https://irix.solutions/',
         chooserTitle: 'Share Mp3 Factory with');
   }
