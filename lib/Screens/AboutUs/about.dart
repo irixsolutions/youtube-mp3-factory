@@ -1,12 +1,10 @@
-import 'dart:js';
+
 
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:youtube_mp3_factory/Constants/colors.dart';
 import 'package:youtube_mp3_factory/Constants/images.dart';
 import 'package:youtube_mp3_factory/Models/screen_size.dart';
-import 'package:youtube_mp3_factory/Screens/AboutUs/about.dart';
 
 
 
@@ -28,7 +26,7 @@ Widget iniwidget() {
         child: backdetails(),
         ),
       Container(
-     // child: bgdesign(),
+      child: bgdesign(),
     ), 
      SizedBox(
        height: 220,
@@ -42,7 +40,7 @@ Widget iniwidget() {
         ),
       ),
       SizedBox(
-        height: 420,
+        //height: 420,
         
         child: 
             textcontain(),
@@ -102,13 +100,18 @@ Widget backdetails(){
   ); 
 }
 Widget textcontain(){
-  return const SizedBox(
-    height: 800,
-    width: 200,
-    child: Text(
-        'Youtube MP3 Factory',
-        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-      )
+  return Container(
+    padding: const EdgeInsets.only(left: 65),
+    height: 280,
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: const [
+        Text(
+            'Youtube MP3 \n Factory',
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+      ],
+    )
     
   );
 }
