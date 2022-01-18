@@ -21,4 +21,8 @@ class DrawerTileChange extends ChangeNotifier {
     item.isTapped = !item.isTapped;
     notifyListeners();
   }
+
+  onLaunch() {
+    drawerTileData[0].isTapped = true;
+  }
 }

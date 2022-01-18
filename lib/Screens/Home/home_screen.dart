@@ -6,6 +6,7 @@ import 'package:youtube_mp3_factory/Constants/colors.dart';
 import 'package:youtube_mp3_factory/Providers/home_b_navigation.dart';
 import 'package:youtube_mp3_factory/Widgets/common/CustomAppBar/custom_app_bar.dart';
 import 'package:youtube_mp3_factory/Widgets/common/CustomDrawer/drawer.dart';
+import 'package:youtube_mp3_factory/main.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -16,6 +17,7 @@ class HomeScreen extends StatelessWidget {
       builder: (context, navigationData, child) {
         return SafeArea(
           child: Scaffold(
+            key: scaffoldKey,
             extendBody: true,
             bottomNavigationBar: CurvedNavigationBar(
               index: navigationData.currentIndex,
