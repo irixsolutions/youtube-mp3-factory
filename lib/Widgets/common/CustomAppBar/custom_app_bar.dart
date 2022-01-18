@@ -10,10 +10,13 @@ PreferredSize customAppbar({required String title}) {
     child: AppBar(
       iconTheme: const IconThemeData(color: kblack, size: 25),
       leading: IconButton(
-          onPressed: () {
-            scaffoldKey.currentState!.openDrawer();
-          },
-          icon: const FaIcon(FontAwesomeIcons.hamburger)),
+        onPressed: () {
+          scaffoldKey.currentState!.openDrawer();
+        },
+        icon: const FaIcon(
+          FontAwesomeIcons.hamburger,
+        ),
+      ),
       elevation: 0,
       centerTitle: true,
       backgroundColor: kWhite,

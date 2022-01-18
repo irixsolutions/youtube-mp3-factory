@@ -1,13 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:youtube_mp3_factory/Constants/colors.dart';
 import 'package:youtube_mp3_factory/Constants/images.dart';
 import 'package:youtube_mp3_factory/Models/screen_size.dart';
-
 import 'package:youtube_mp3_factory/Widgets/common/widgets/custom_text.dart';
-
 import 'drawer_tiles.dart';
 
 class CustomDrawer extends StatelessWidget {

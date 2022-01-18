@@ -39,7 +39,7 @@ class DrawerTileChange extends ChangeNotifier {
         title: 'Mp3 Factory App 😍',
         text: 'Hello , Download this awesome mp3 factory app from here 😍👉\n',
         linkUrl: 'https://irix.solutions/',
-        chooserTitle: 'Share Mp3 Factory with');
+        chooserTitle: 'Share Mp3 Factory with',);
   }
 
   onLaunch() {

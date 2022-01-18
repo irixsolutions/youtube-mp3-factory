@@ -33,7 +33,6 @@ class MyApp extends StatelessWidget {
 }
 
 
-
 //use width and height  like :-  
   //ScreenSize.height  and    ScreenSize.width
 
