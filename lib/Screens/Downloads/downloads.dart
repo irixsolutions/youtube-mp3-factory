@@ -16,7 +16,7 @@ class Downloads extends StatelessWidget {
           padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
           child: InkWell(
             onTap: (){
-              debugPrint("Hello");
+             // debugPrint("Hello");
             },
             child: SizedBox(
               height: 100,
