@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_share/flutter_share.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:youtube_mp3_factory/Models/drawer_tile.dart';
 
@@ -20,6 +21,25 @@ class DrawerTileChange extends ChangeNotifier {
     var item = drawerTileData[index];
     item.isTapped = !item.isTapped;
     notifyListeners();
+
+    switch (index) {
+      case 0:
+        debugPrint("Home");
+        break;
+      case 3:
+        debugPrint("Share");
+        share();
+        break;
+      default:
+    }
+  }
+
+  Future<void> share() async {
+    await FlutterShare.share(
+        title: 'Mp3 Factory App 😍',
+        text: 'Hello , Download this awsome mp3 factory app from here 😍👉\n',
+        linkUrl: 'https://irix.solutions/',
+        chooserTitle: 'Share Mp3 Factory with');
   }
 
   onLaunch() {
