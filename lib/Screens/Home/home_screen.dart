@@ -15,42 +15,37 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<HomeBNavigation>(
       builder: (context, navigationData, child) {
-        return SafeArea(
-          child: DefaultTabController(
-            length: 3,
-            child: Scaffold(
-              key: scaffoldKey,
-              extendBody: true,
-              bottomNavigationBar: CurvedNavigationBar(
-                index: navigationData.currentIndex,
-                color: primaryColor,
-                backgroundColor: Colors.transparent,
-          
-                //IconList
-                items: navigationData.items.map((ico) {
-                  return FaIcon(
-                    ico.icon,
-                    color: kWhite,
-                  );
-                }).toList(),
-          
-                //ontap
-                onTap: (index) {
-                  navigationData.onIndexChange(index);
-                },
-              ),
-          
-              //Drawer
-              drawer: const CustomDrawer(),
-          
-              //AppBar
-              appBar: customAppbar(
-                  title: navigationData.items[navigationData.currentIndex].title),
-          
-              //Body
-              body: navigationData.routes[navigationData.currentIndex],
-            ),
+        return Scaffold(
+          key: scaffoldKey,
+          extendBody: true,
+          bottomNavigationBar: CurvedNavigationBar(
+            index: navigationData.currentIndex,
+            color: primaryColor,
+            backgroundColor: Colors.transparent,
+
+            //IconList
+            items: navigationData.items.map((ico) {
+              return FaIcon(
+                ico.icon,
+                color: kWhite,
+              );
+            }).toList(),
+
+            //ontap
+            onTap: (index) {
+              navigationData.onIndexChange(index);
+            },
           ),
+
+          //Drawer
+          drawer: const CustomDrawer(),
+
+          //AppBar
+          appBar: customAppbar(
+              title: navigationData.items[navigationData.currentIndex].title),
+
+          //Body
+          body: navigationData.routes[navigationData.currentIndex],
         );
       },
     );

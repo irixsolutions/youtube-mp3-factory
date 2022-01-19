@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:youtube_mp3_factory/Constants/colors.dart';
+import 'package:youtube_mp3_factory/Constants/icons.dart';
 import 'package:youtube_mp3_factory/Widgets/common/widgets/custom_text.dart';
 import 'package:youtube_mp3_factory/main.dart';
 
@@ -13,9 +14,7 @@ PreferredSize customAppbar({required String title}) {
         onPressed: () {
           scaffoldKey.currentState!.openDrawer();
         },
-        icon: const FaIcon(
-          FontAwesomeIcons.hamburger,
-        ),
+        icon: Image.asset(menu),
       ),
       elevation: 0,
       centerTitle: true,
