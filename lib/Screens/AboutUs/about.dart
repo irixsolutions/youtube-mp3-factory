@@ -9,6 +9,7 @@ import 'package:youtube_mp3_factory/Models/screen_size.dart';
 const String _urlfb = 'https://www.facebook.com/IRIXsolutions';
 const String _urllinkdin = 'https://www.linkedin.com/company/irix-solutions/';
 const String _urlinster = 'https://www.instagram.com/irix_solutions/';
+const String _urlweb = 'https://irix.solutions/';
 
 class AboutUs extends StatelessWidget {
   const AboutUs({Key? key}) : super(key: key);
@@ -71,7 +72,7 @@ Widget backdetails() {
     width: ScreenSize.width * 0.9,
     //alignment: Alignment.topLeft,
     transformAlignment: Alignment.topLeft,
-    decoration: const BoxDecoration(
+    decoration: const BoxDecoration( 
         borderRadius: BorderRadius.only(bottomRight: Radius.circular(80)),
         boxShadow: [
           BoxShadow(
@@ -161,12 +162,15 @@ Widget term() {
         borderRadius: const BorderRadius.only(topRight: Radius.circular(25)),
       ),
       height: 60,
-      child: Container(
-        alignment: Alignment.centerLeft,
-        padding: const EdgeInsets.only(left: 10),
-        child: const Text(
-          'Terms & Conditions',
-          style: TextStyle(color: primaryColor, fontWeight: FontWeight.bold),
+      child: InkWell(
+        onTap: _launchURLweb,
+        child: Container(
+          alignment: Alignment.centerLeft,
+          padding: const EdgeInsets.only(left: 10),
+          child: const Text(
+            'Terms & Conditions',
+            style: TextStyle(color: primaryColor, fontWeight: FontWeight.bold),
+          ),
         ),
       ),
     ),
@@ -211,4 +215,8 @@ void _launchURLlinkedin() async {
 
 void _launchURLinster() async {
   if (!await launch(_urlinster)) throw 'Could not launch $_urlinster';
+}
+
+void _launchURLweb() async {
+  if (!await launch(_urlweb)) throw 'Could not launch $_urlweb';
 }

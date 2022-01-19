@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:youtube_mp3_factory/Constants/images.dart';
 import 'package:youtube_mp3_factory/Models/screen_size.dart';
 import 'package:youtube_mp3_factory/Screens/AboutUs/about.dart';
+import 'package:youtube_mp3_factory/Screens/Copyurl/urlcopy.dart';
 
 // ignore: camel_case_types
 class splash extends StatelessWidget {
@@ -27,7 +28,7 @@ class splash extends StatelessWidget {
 Widget splashing(){
   return AnimatedSplashScreen(
     splash: applogo,
-    nextScreen: const AboutUs(),
+    nextScreen: const Copyurl(),
     splashTransition: SplashTransition.rotationTransition,
     splashIconSize: ScreenSize.width * 0.5,
   );
