@@ -28,7 +28,7 @@ class splash extends StatelessWidget {
 Widget splashing(){
   return AnimatedSplashScreen(
     splash: applogo,
-    nextScreen: const Copyurl(),
+    nextScreen: Copyurl(),
     splashTransition: SplashTransition.rotationTransition,
     splashIconSize: ScreenSize.width * 0.5,
   );
