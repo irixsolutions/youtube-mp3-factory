@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:youtube_mp3_factory/Models/screen_size.dart';
 import 'package:youtube_mp3_factory/Providers/drawer_tile_change.dart';
+import 'package:youtube_mp3_factory/Screens/Search/search_screen.dart';
 import 'package:youtube_mp3_factory/Screens/Splash%20Screen/splash_screen.dart';
 
 class Wrapper extends StatelessWidget {
@@ -12,6 +13,6 @@ class Wrapper extends StatelessWidget {
     final Size screenSize = MediaQuery.of(context).size;
     ScreenSize.setScreenSize(screenSize.height, screenSize.width);
     Provider.of<DrawerTileChange>(context, listen: false).onLaunch();
-    return const Splash();
+    return const SearchScreen();
   }
 }
