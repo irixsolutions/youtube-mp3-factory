@@ -18,7 +18,7 @@ class DrawerTile extends StatelessWidget {
         selected: item.isTapped,
         selectedTileColor: primaryColor.withOpacity(0.3),
         onTap: () {
-          tileData.onTileTapped(index);
+          tileData.onTileTapped(index:index , context:context);
         },
         leading:
             FaIcon(item.icon, color: item.isTapped ? primaryColor : kblack),

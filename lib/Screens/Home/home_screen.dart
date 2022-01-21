@@ -42,6 +42,7 @@ class HomeScreen extends StatelessWidget {
 
           //AppBar
           appBar: customAppbar(
+              context: context,
               title: navigationData.items[navigationData.currentIndex].title),
 
           //Body

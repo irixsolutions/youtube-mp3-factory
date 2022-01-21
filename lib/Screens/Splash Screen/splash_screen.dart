@@ -11,11 +11,29 @@ class Splash extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedSplashScreen(
-      splash: applogo,
-      nextScreen: const HomeScreen(),
-      splashTransition: SplashTransition.rotationTransition,
-      splashIconSize: ScreenSize.width * 0.5,
+    return Scaffold(
+      body: Stack(
+        children: [
+          splashing(),
+          const Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding: EdgeInsets.all(8.0),
+              child:
+                  Text('Powered by IRIX', style: TextStyle(letterSpacing: 2)),
+            ),
+          )
+        ],
+      ),
     );
   }
+}
+
+Widget splashing() {
+  return AnimatedSplashScreen(
+    splash: applogo,
+    nextScreen: const HomeScreen(),
+    splashTransition: SplashTransition.rotationTransition,
+    splashIconSize: ScreenSize.width * 0.5,
+  );
 }

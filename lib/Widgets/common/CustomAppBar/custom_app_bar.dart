@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:youtube_mp3_factory/Constants/colors.dart';
 import 'package:youtube_mp3_factory/Constants/icons.dart';
+import 'package:youtube_mp3_factory/Widgets/CopyURL/copyurl.dart';
 import 'package:youtube_mp3_factory/Widgets/common/widgets/custom_text.dart';
 import 'package:youtube_mp3_factory/main.dart';
 
-PreferredSize customAppbar({required String title}) {
+PreferredSize customAppbar({required String title,required BuildContext context}) {
   return PreferredSize(
     child: AppBar(
       iconTheme: const IconThemeData(color: kblack, size: 25),
@@ -26,7 +27,13 @@ PreferredSize customAppbar({required String title}) {
       ),
       actions: [
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            showDialog(
+                context: context,
+                builder: (_) {
+                  return Copyurl();
+                });
+          },
           icon: const FaIcon(FontAwesomeIcons.link),
         ),
         IconButton(

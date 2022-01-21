@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:youtube_mp3_factory/Constants/colors.dart';
+import 'package:youtube_mp3_factory/Routes/route_names.dart';
+import 'package:youtube_mp3_factory/Routes/routes.dart';
 import 'package:youtube_mp3_factory/Screens/Wrapper/wrapper.dart';
 import 'Providers/providers.dart';
 
@@ -19,6 +21,8 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: providers,
       child: MaterialApp(
+        initialRoute: wrapper,
+        routes: routes,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           scaffoldBackgroundColor: kWhite,
@@ -26,7 +30,6 @@ class MyApp extends StatelessWidget {
             Theme.of(context).textTheme,
           ),
         ),
-        home: const Wrapper(),
       ),
     );
   }
