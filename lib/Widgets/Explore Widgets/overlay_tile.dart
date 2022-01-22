@@ -4,9 +4,10 @@ import 'package:youtube_mp3_factory/Models/screen_size.dart';
 import 'package:youtube_mp3_factory/Widgets/common/widgets/custom_text.dart';
 
 class OverlayTile extends StatelessWidget {
+  final String title;
   final void Function()? downloadOnTap;
   final void Function()? playOnTap;
-  const OverlayTile({Key? key, this.downloadOnTap, this.playOnTap})
+  const OverlayTile({Key? key, this.downloadOnTap, this.playOnTap, required this.title})
       : super(key: key);
 
   @override
@@ -19,20 +20,20 @@ class OverlayTile extends StatelessWidget {
         color: kblack.withOpacity(0.5),
         child: SizedBox(
           width: ScreenSize.width * 0.4,
-          height: ScreenSize.height * 0.12,
-          child: overLayTitle(),
+          //height: ScreenSize.height * 0.12,
+          child: overLayTitle(title: title),
         ),
       ),
     );
   }
 }
 
-Widget overLayTitle() {
-  return const Padding(
-    padding: EdgeInsets.all(7.0),
+Widget overLayTitle({required String title}) {
+  return Padding(
+    padding: const EdgeInsets.all(7.0),
     child: CustomText(
       color: kWhite,
-      text: "CKay - Love Nwantiti Remix ft. Joeboy & Kuami Eugene [Ah Ah Ah]",
+      text: title,
       maxLines: 100,
       textAlign: TextAlign.center,
     ),

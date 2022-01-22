@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_mp3_factory/Constants/colors.dart';
 import 'package:youtube_mp3_factory/Models/screen_size.dart';
-import 'package:youtube_mp3_factory/Widgets/About%20us/social_media_launch.dart';
+
 
 import 'details.dart';
 
