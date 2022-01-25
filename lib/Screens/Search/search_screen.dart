@@ -19,10 +19,8 @@ class _SearchScreenState extends State<SearchScreen> {
         iconTheme: const IconThemeData(),
         elevation: 0,
         backgroundColor: kWhite,
-        title: Flexible(
-          child: CustomTextField(
-            search: _search,
-          ),
+        title: CustomTextField(
+          search: _search,
         ),
       ),
       body: const SearchList(),
