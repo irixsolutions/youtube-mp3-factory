@@ -46,7 +46,9 @@ PreferredSize customAppbar(
           },
           icon: const FaIcon(FontAwesomeIcons.search),
         ),
+        
       ],
+      
     ),
     preferredSize: const Size.fromHeight(66),
   );
